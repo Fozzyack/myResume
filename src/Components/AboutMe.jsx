@@ -101,7 +101,7 @@ const AboutMe = () => {
 
 
     return (
-        <section className='text-white'>
+        <section className='text-white' id='aboutme'>
             <motion.div
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}
@@ -124,7 +124,7 @@ const AboutMe = () => {
                             <TabSwapper selectTab={() => changeTab("other")} active={tab === "other"}>Other Skills</TabSwapper>
                             <TabSwapper selectTab={() => changeTab("hobbies")} active={tab === "hobbies"}>Hobbies</TabSwapper>
                         </div>
-                        <motion.div className='px-5 '
+                        <motion.div className='px-5 mt-4'
                             animate={isOpen ? 'open' : 'closed'}
                             variants={variants}
                         >

@@ -3,7 +3,7 @@ import NavLink from './NavLink';
 import { Link } from 'react-router-dom';
 import NavMenuMobile from './NavMenuMobile';
 
-const Navbar = () => {
+const Navbar = ({aboutRef, testimonialRef, projectRef}) => {
 
     const [openMenu, setOpenMenu] = useState(false);
 
@@ -14,21 +14,28 @@ const Navbar = () => {
         setOpenMenu(false);
     }
 
+    const scrollToReference = (elementReference) => {
+        window.scrollTo({
+            top:  elementReference.current.offsetTop,
+            behavior: 'smooth'
+        });
+    }
+
     const links = [
         {
             href: '#contacts',
             title: 'Contacts'
         },
         {
-            href: '#about',
+            href: 'aboutme',
             title: 'About'
         },
         {
-            href: '#projects',
+            href: 'projects',
             title: 'Projects'
         },
         {
-            href: '#testimonials',
+            href: 'testimonials',
             title: 'Testimonials'
         }
     ]

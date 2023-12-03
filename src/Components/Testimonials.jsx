@@ -27,26 +27,29 @@ const TESTIMONIAL_INFO = [
 ]
 const Testimonials = () => {
     return (
-        <div className='p-10'>
-            <h5 className='font-bold text-white text-center text-3xl'>
-                Testimonials
-            </h5>
-            <div className='md:grid md:grid-cols-3 gap-5 my-4 text-white'>
-                {
-                    TESTIMONIAL_INFO.map((testimonial, index) => (
-                        <motion.div key={index} className='flex p-1 bg-gradient-to-br from-[#31CB00] via-[#2a7221] to-[#1766b5] rounded-xl mt-3'
-                        whileHover={{scale: 1.1}}
-                        >
-                            <div className='bg-[#121212] p-4 border rounded-xl w-full '>
-                                <p>"{testimonial.content}"</p>
-                                <br></br>
-                                <p>- {testimonial.name}, {testimonial.relation} {testimonial.job}</p>
-                            </div>
-                        </motion.div>
-                    ))
-                }
+        <section id='testimonials'>
+            <div className='p-10'>
+                <h5 className='font-bold text-white text-center text-3xl'>
+                    Testimonials
+                </h5>
+                <div className='md:grid md:grid-cols-3 gap-5 my-4 text-white'>
+                    {
+                        TESTIMONIAL_INFO.map((testimonial, index) => (
+                            <motion.div key={index} className='flex p-1 bg-gradient-to-br from-[#31CB00] via-[#2a7221] to-[#1766b5] rounded-xl mt-3'
+                                whileHover={{ scale: 1.1 }}
+                            >
+                                <div className='bg-[#121212] p-4 border rounded-xl w-full '>
+                                    <p>"{testimonial.content}"</p>
+                                    <br></br>
+                                    <p>- {testimonial.name}, {testimonial.relation} {testimonial.job}</p>
+                                </div>
+                            </motion.div>
+                        ))
+                    }
+                </div>
             </div>
-        </div>
+        </section>
+
     )
 }
 
