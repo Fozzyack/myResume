@@ -40,8 +40,7 @@ const ProjectCard = () => {
     const [cardDesc, setCardDesc] = useState({
         title: CARD_INFO[0].title,
         desc: CARD_INFO[0].description
-    })
-    const [isPending, startTransition] = useTransition();
+    });
 
     const handleNextSlide = () => {
         setCardClass('transition-opacity duration-200 ease-in opacity-0');
@@ -53,32 +52,49 @@ const ProjectCard = () => {
             } else {
                 setIndex(index + 1);
             }
-            startTransition(() => {
-                setCardDesc({ title: CARD_INFO[index].title, desc: CARD_INFO[index].description })
-                setResetBackground({ background: `url(${CARD_INFO[index].image})`, backgroundSize: 'cover', backgroundPosition: 'center' });
-            })
+            setCardDesc({ title: CARD_INFO[index].title, desc: CARD_INFO[index].description })
+        }, 100)
+
+        setTimeout(() => {
+
+
+            setResetBackground({ background: `url(${CARD_INFO[index].image})`, backgroundSize: 'cover', backgroundPosition: 'center' });
             setCardClass('transition-opacity duration-100 ease-in opacity-100');
+            console.log(cardDesc.title)
+            console.log(index);
+            console.log(CARD_INFO.length - 1)
         }, 600);
+
 
     };
 
     const handlePrevSlide = () => {
         setCardClass('transition-opacity duration-200 ease-in opacity-0');
-        setResetBackground({ background: `url(${CARD_INFO[index].image})` });
+        setResetBackground({});
+
         setTimeout(() => {
             if (index === 0) {
-                setIndex(CARD_INFO.length - 1)
+                setIndex(CARD_INFO.length - 1);
             } else {
                 setIndex(index - 1);
-            };
+            }
+            setCardDesc({ title: CARD_INFO[index].title, desc: CARD_INFO[index].description })
+        }, 100)
 
-            setCardDesc({ title: CARD_INFO[index].title, desc: CARD_INFO[0].description })
+        setTimeout(() => {
+
+
             setResetBackground({ background: `url(${CARD_INFO[index].image})`, backgroundSize: 'cover', backgroundPosition: 'center' });
-            setCardClass('transition-opacity duration-200 ease-in opacity-100');
-        }, 300)
+            setCardClass('transition-opacity duration-100 ease-in opacity-100');
+            
+        }, 600);
+
 
     };
 
+    console.log(cardDesc.title)
+    console.log(index);
+    console.log(CARD_INFO.length - 1)
     return (
         <div >
             <div className={`${cardClass} mt-10`}>
