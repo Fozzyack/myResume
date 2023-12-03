@@ -36,7 +36,7 @@ const Navbar = () => {
     return (
         <nav className='fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-95'>
             <div className='flex flex-wrap items-center justify-between mx-auto  px-4'>
-                <Link className='text-white text-xl md:text-4xl font-semibold'>[ AN UNEMPLOYED UNI STUDENT ]</Link>
+                <Link className='text-white text-sm md:text-4xl font-semibold'>[ PROFESSIONAL PROCRASTINATOR ]</Link>
                 <div className='mobile-menu block md:hidden px-3 py-3'>
                     {
                         openMenu ? (

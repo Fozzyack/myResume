@@ -28,13 +28,16 @@ const Hero = () => {
                                     // Same substring at the start will only be typed out once, initially
                                     'Frasier',
                                     2500, // wait 1s before replacing "Mice" with "Hamsters"
-                                    'a Web Developer',
-                                    2500,
                                     'a University Student',
                                     2500,
+                                    'a Web Developer',
+                                    1000,
+                                    'a Web Developer (kinda)',
+                                    2500
                                 ]}
+                                    
                                 wrapper="span"
-                                speed={50}
+                                speed={55}
                                 repeat={Infinity}
                             />
                         </div>

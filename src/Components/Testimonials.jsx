@@ -7,7 +7,7 @@ const TESTIMONIAL_INFO = [
         name: 'Valerie',
         relation: 'Grandma',
         job: '',
-        content: "Sweetie, I am bursting with pride for my wonderful grandchild! They possess a heart of gold, kindness that knows no bounds, and a brilliant mind that lights up our world. I am beyond grateful to be their grandma. They bring so much joy and warmth to our family. Love, Grandma.",
+        content: "Witnessing my grandchild's journey has been a treasure. Their resilience, compassion, and zest for life inspire everyone around. A true gem, they fill our days with laughter and love. I'm immensely proud and blessed to be their grandma. Much love, Grandma.",
     },
     {
         id: 1,
@@ -32,6 +32,7 @@ const Testimonials = () => {
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
                 viewport={{once: false}}
+                transition={{ duration: 1, delay: 0.8, ease: 'easeOut' }}
             >
                 <h5 className='font-bold text-white text-center text-3xl'>
                     Testimonials
