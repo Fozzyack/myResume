@@ -2,20 +2,21 @@ import React from 'react'
 import HeroImag from '../assets/abo4.png'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion';
+import Counter from './Counter';
 
 const Hero = () => {
 
     return (
         <section>
             <motion.div className='grid grid-cols-1 sm:grid-cols-12 xl:px-16'
-                initial={{opacity: 0, scale: 0.5}}
-                animate={{ opacity: 1, scale: 1}}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{
-                    duration:  0.8,
+                    duration: 0.8,
                     delay: 0.5,
                     ease: [0, 0.71, 0.2, 1.01]
                 }}
-                
+
             >
                 <div className='col-span-7 place-self-center  text-center sm:text-left justify-self-start'>
                     <h1 className='text-white mb-4 lg:text-6xl sm:text-5xl text-4xl font-extrabold'>
@@ -35,7 +36,7 @@ const Hero = () => {
                                     'a Web Developer (kinda)',
                                     2500
                                 ]}
-                                    
+
                                 wrapper="span"
                                 speed={55}
                                 repeat={Infinity}
@@ -44,7 +45,7 @@ const Hero = () => {
 
                     </h1>
                     <p className='text-[#ADB7BE] text-base sm:text-lg lg:text-xl'>
-                        and I'm looking for an Internship :). 
+                        and I'm looking for an Internship :).
                         <br></br>
                         Please feel free to have a look through my website!
                     </p>
@@ -65,6 +66,7 @@ const Hero = () => {
                     />
                 </div>
             </motion.div>
+            <Counter />
         </section>
 
     )
