@@ -3,8 +3,7 @@ import JapWeb from '../assets/ProjectImgs/JapWeb.png';
 import timerIMG from '../assets/ProjectImgs/test.png'
 import rowingIMG from '../assets/ProjectImgs/Rowing.png'
 import webImage from '../assets/ProjectImgs/WebsiteUI.png'
-import { useTransform } from 'framer-motion';
-import { useTransition } from 'react';
+import { motion } from 'framer-motion';
 
 const CARD_INFO = [
     {
@@ -35,76 +34,60 @@ const CARD_INFO = [
 const ProjectCard = () => {
 
     const [index, setIndex] = useState(0);
-    const [cardClass, setCardClass] = useState('')
-    const [resetbackground, setResetBackground] = useState({ background: `url(${CARD_INFO[index].image})`, backgroundSize: 'cover', backgroundPosition: 'center' });
-    const [cardDesc, setCardDesc] = useState({
-        title: CARD_INFO[0].title,
-        desc: CARD_INFO[0].description
-    });
+    const variants = {
+        showSlide: { opacity: 1, x: 0 },
+        closeSlide: { opacity: 0, x: '100%' }
+    }
+    const [show, setShow] = useState(true);
 
     const handleNextSlide = () => {
-        setCardClass('transition-opacity duration-200 ease-in opacity-0');
-        setResetBackground({});
-
+        setShow(false);
+        
         setTimeout(() => {
             if (index === CARD_INFO.length - 1) {
                 setIndex(0);
-            } else {
-                setIndex(index + 1);
             }
-            setCardDesc({ title: CARD_INFO[index].title, desc: CARD_INFO[index].description })
-        }, 100)
+            else {setIndex(prevIndex => prevIndex + 1)};
+        }, 200)
 
         setTimeout(() => {
-
-
-            setResetBackground({ background: `url(${CARD_INFO[index].image})`, backgroundSize: 'cover', backgroundPosition: 'center' });
-            setCardClass('transition-opacity duration-100 ease-in opacity-100');
-            console.log(cardDesc.title)
-            console.log(index);
-            console.log(CARD_INFO.length - 1)
-        }, 600);
-
+            setShow(true);
+        }, 1000);
+        
 
     };
 
     const handlePrevSlide = () => {
-        setCardClass('transition-opacity duration-200 ease-in opacity-0');
-        setResetBackground({});
 
+        setShow(false);
+        
         setTimeout(() => {
             if (index === 0) {
                 setIndex(CARD_INFO.length - 1);
-            } else {
-                setIndex(index - 1);
             }
-            setCardDesc({ title: CARD_INFO[index].title, desc: CARD_INFO[index].description })
-        }, 100)
+            else {setIndex(prevIndex => prevIndex - 1)};
+        }, 200)
 
         setTimeout(() => {
-
-
-            setResetBackground({ background: `url(${CARD_INFO[index].image})`, backgroundSize: 'cover', backgroundPosition: 'center' });
-            setCardClass('transition-opacity duration-100 ease-in opacity-100');
-            
-        }, 600);
-
+            setShow(true);
+        }, 1000);
 
     };
 
-    console.log(cardDesc.title)
-    console.log(index);
-    console.log(CARD_INFO.length - 1)
     return (
         <div >
-            <div className={`${cardClass} mt-10`}>
-                <div className='lg:h-[700px] md:h-[500px] h-72 rounded-t-xl' style={resetbackground}>
+            <motion.div className={` mt-10`}
+                initial={true}
+                animate={show ? 'showSlide' : 'closeSlide'}
+                variants={variants}
+            >
+                <div className='lg:h-[700px] md:h-[500px] h-72 rounded-t-xl' style={{ background: `url(${CARD_INFO[index].image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 </div>
                 <div className='text-white rounded-b-xl p-3 bg-[#1f1d1d]'>
-                    <h4 className='font-bold text-lg'>{cardDesc.title}</h4>
-                    <p>{cardDesc.desc}</p>
+                    <h4 className='font-bold text-lg'>{CARD_INFO[index].title}</h4>
+                    <p>{CARD_INFO[index].description}</p>
                 </div>
-            </div>
+            </motion.div>
 
             <div className='text-white text-center space-x-3 mt-3'>
                 <button onClick={() => { handlePrevSlide() }}>
@@ -121,6 +104,7 @@ const ProjectCard = () => {
             </div>
         </div>
     )
-}
+
+};
 
 export default ProjectCard
