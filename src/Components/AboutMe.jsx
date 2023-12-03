@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 
 const SECTION_INFO = [
     {
-        title: 'skills',
-        id: 'skills',
+        title: 'hardskills',
+        id: 'hardskills',
         content: (
             <ul>
                 <li className='text-white font-bold'>Web Development (PERN STACK)</li>
@@ -23,6 +23,38 @@ const SECTION_INFO = [
                 <li className='text-white font-bold mt-1'>Deployment</li>
                 <ul className='list-disc ml-4'>
                     <li>Digital Ocean</li>
+                </ul>
+
+
+            </ul>
+        )
+    },
+    {
+        title: 'softskills',
+        id: 'softskills',
+        content: (
+            <ul>
+                <li className='text-white font-bold'>Communication</li>
+                <ul className='list-disc ml-4'>
+                    <li>Effective Written and Verbal Communication</li>
+                    <li>Active listener</li>
+                    <li>Clear and concise expression of ideas</li>
+                </ul>
+                <li className='text-white font-bold'>Teamwork</li>
+                <ul className='list-disc ml-4'>
+                    <li>Collaboration and cooperation</li>
+                    <li>Conflict resolution</li>
+                    <li>Being a team player</li>
+                </ul>
+                <li className='text-white font-bold'>Adaptability</li>
+                <ul className='list-disc ml-4'>
+                    <li>Flexibility in handling change</li>
+                    <li>Ability to learn and adapt quickly</li>
+                </ul>
+                <li className='text-white font-bold'>Problem Solving</li>
+                <ul className='list-disc ml-4'>
+                    <li>Critical Thinking</li>
+                    <li>Decision-making</li>
                 </ul>
 
 
@@ -79,7 +111,7 @@ const SECTION_INFO = [
 ]
 const AboutMe = () => {
 
-    const [tab, setTab] = useState('skills');
+    const [tab, setTab] = useState('hardskills');
     const [isOpen, setIsOpen] = useState(true);
     const [isPending, startTransition] = useTransition();
 
@@ -90,28 +122,28 @@ const AboutMe = () => {
                 setTab(name);
             })
             setIsOpen(true);
-        },200);
-        
+        }, 200);
+
     };
 
     const variants = {
-        open: { opacity: 1, y:0},
-        closed: { opacity: 0, y:'100%' },
-      }
+        open: { opacity: 1, y: 0 },
+        closed: { opacity: 0, y: '100%' },
+    }
 
 
     return (
         <section className='text-white' id='aboutme'>
             <motion.div
-            initial={{opacity: 0}}
-            whileInView={{opacity: 1}}
-            viewport={{once: false}}
-            transition={{duration: 1, delay: 0.2, ease: 'easeOut'}}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
             >
                 <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 md:px-24'>
 
                     <img src={setup} className='rounded-xl' />
-                    <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
+                    <div className='mt-4 md:mt-0 text-left flex flex-col h-full min-h-[600px]'>
                         <h2 className='text-white text-4xl font-semibold mb-4'>
                             About Me
                         </h2>
@@ -119,8 +151,9 @@ const AboutMe = () => {
                             I am a University student who does some fullstack web development on the side and am currently looking for an internship.
                         </p>
                         <div className='flex flex-row mt-8'>
-                            <TabSwapper selectTab={() => changeTab("skills")} active={tab === "skills"}>Skills</TabSwapper>
-                            <TabSwapper selectTab={() => changeTab("education")} active={tab === "education"}>Eduction</TabSwapper>
+                            <TabSwapper selectTab={() => changeTab("hardskills")} active={tab === "hardskills"}>Hard Skills</TabSwapper>
+                            <TabSwapper selectTab={() => changeTab("softskills")} active={tab === "softskills"}>Soft Skills</TabSwapper>
+                            <TabSwapper selectTab={() => changeTab("education")} active={tab === "education"}>Education</TabSwapper>
                             <TabSwapper selectTab={() => changeTab("other")} active={tab === "other"}>Other Skills</TabSwapper>
                             <TabSwapper selectTab={() => changeTab("hobbies")} active={tab === "hobbies"}>Hobbies</TabSwapper>
                         </div>

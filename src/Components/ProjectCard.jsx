@@ -3,6 +3,7 @@ import JapWeb from '../assets/ProjectImgs/JapWeb.png';
 import timerIMG from '../assets/ProjectImgs/test.png'
 import rowingIMG from '../assets/ProjectImgs/Rowing.png'
 import webImage from '../assets/ProjectImgs/WebsiteUI.png'
+import ThisWebsite from '../assets/ProjectImgs/ThisWebsite.JPG'
 import { motion } from 'framer-motion';
 
 const CARD_INFO = [
@@ -30,6 +31,12 @@ const CARD_INFO = [
         title: 'ACICIS Student Organiser',
         description: 'A University Project which was a WebApp that helped ACICIS with their student management in which it helped chose students to send on overseas scholarships - Completed: December 2024'
     },
+    {
+        id: 4,
+        image: ThisWebsite,
+        title: 'This Website',
+        description: 'The Website you are currently looking at! Been in development for: 3 days'
+    },
 ]
 const ProjectCard = () => {
 
@@ -44,19 +51,19 @@ const ProjectCard = () => {
     const handleNextSlide = () => {
         setShow(false);
         setBackReset('contain');
-        
+
         setTimeout(() => {
             if (index === CARD_INFO.length - 1) {
                 setIndex(0);
             }
-            else {setIndex(prevIndex => prevIndex + 1)};
+            else { setIndex(prevIndex => prevIndex + 1) };
             setBackReset('cover');
         }, 200)
 
         setTimeout(() => {
             setShow(true);
         }, 1000);
-        
+
 
     };
 
@@ -68,7 +75,7 @@ const ProjectCard = () => {
             if (index === 0) {
                 setIndex(CARD_INFO.length - 1);
             }
-            else {setIndex(prevIndex => prevIndex - 1)};
+            else { setIndex(prevIndex => prevIndex - 1) };
             setBackReset('cover');
         }, 200)
 
@@ -85,12 +92,15 @@ const ProjectCard = () => {
                 animate={show ? 'showSlide' : 'closeSlide'}
                 variants={variants}
             >
-                <div className='lg:h-[700px] md:h-[500px] h-72 rounded-t-xl' style={{ background: `url(${CARD_INFO[index].image})`, backgroundSize: `${backresent}`, backgroundPosition: 'center' }}>
+                <div className='border border-white rounded-xl'>
+                    <div className='lg:h-[700px] md:h-[500px] h-72 rounded-t-xl' style={{ background: `url(${CARD_INFO[index].image})`, backgroundSize: `${backresent}`, backgroundPosition: 'center' }}>
+                    </div>
+                    <div className='text-white rounded-b-xl p-3 bg-[#1f1d1d] border-t border-white'>
+                        <h4 className='font-bold text-lg'>{CARD_INFO[index].title}</h4>
+                        <p>{CARD_INFO[index].description}</p>
+                    </div>
                 </div>
-                <div className='text-white rounded-b-xl p-3 bg-[#1f1d1d]'>
-                    <h4 className='font-bold text-lg'>{CARD_INFO[index].title}</h4>
-                    <p>{CARD_INFO[index].description}</p>
-                </div>
+
             </motion.div>
 
             <div className='text-white text-center space-x-3 mt-3'>

@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroImag from '../assets/HeroImag.png'
+import HeroImag from '../assets/abo4.png'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion';
 
@@ -41,7 +41,9 @@ const Hero = () => {
 
                     </h1>
                     <p className='text-[#ADB7BE] text-base sm:text-lg lg:text-xl'>
-                        and I'm looking for an Internship :)
+                        and I'm looking for an Internship :). 
+                        <br></br>
+                        Please feel free to have a look through my website!
                     </p>
                     <div>
                         <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 text-white bg-white hover:bg-slate-200 bg-gradient-to-br from-[#31CB00] via-[#2a7221] to-[#1766b5] mt-3'>Hire Me</button>
