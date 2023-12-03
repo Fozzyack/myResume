@@ -34,6 +34,7 @@ const CARD_INFO = [
 const ProjectCard = () => {
 
     const [index, setIndex] = useState(0);
+    const [backresent, setBackReset] = useState('cover')
     const variants = {
         showSlide: { opacity: 1, x: 0 },
         closeSlide: { opacity: 0, x: '100%' }
@@ -42,12 +43,14 @@ const ProjectCard = () => {
 
     const handleNextSlide = () => {
         setShow(false);
+        setBackReset('contain');
         
         setTimeout(() => {
             if (index === CARD_INFO.length - 1) {
                 setIndex(0);
             }
             else {setIndex(prevIndex => prevIndex + 1)};
+            setBackReset('cover');
         }, 200)
 
         setTimeout(() => {
@@ -60,12 +63,13 @@ const ProjectCard = () => {
     const handlePrevSlide = () => {
 
         setShow(false);
-        
+        setBackReset('contain');
         setTimeout(() => {
             if (index === 0) {
                 setIndex(CARD_INFO.length - 1);
             }
             else {setIndex(prevIndex => prevIndex - 1)};
+            setBackReset('cover');
         }, 200)
 
         setTimeout(() => {
@@ -81,7 +85,7 @@ const ProjectCard = () => {
                 animate={show ? 'showSlide' : 'closeSlide'}
                 variants={variants}
             >
-                <div className='lg:h-[700px] md:h-[500px] h-72 rounded-t-xl' style={{ background: `url(${CARD_INFO[index].image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className='lg:h-[700px] md:h-[500px] h-72 rounded-t-xl' style={{ background: `url(${CARD_INFO[index].image})`, backgroundSize: `${backresent}`, backgroundPosition: 'center' }}>
                 </div>
                 <div className='text-white rounded-b-xl p-3 bg-[#1f1d1d]'>
                     <h4 className='font-bold text-lg'>{CARD_INFO[index].title}</h4>
