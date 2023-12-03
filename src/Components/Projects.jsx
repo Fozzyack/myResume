@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   return (
     <motion.div
-      //initial={{opacity: 0}}
-      //whileInView={{opacity: 1}}
-      //viewport={{once: false}}
+      initial={{opacity: 0}}
+      whileInView={{opacity: 1}}
+      viewport={{once: false}}
     >
       <h2 className='text-center text-white font-bold text-4xl border-b border-green-500'>
         My Projects
