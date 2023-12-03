@@ -11,8 +11,8 @@ const EmailForm = () => {
                 <label className='block text-gray-300 text-sm font-bold mb-2 pt-3' for='email'>Email</label>
                 <input className='shadow border  rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline' placeholder='example@email.com'></input>
 
-                <label className='block text-gray-300 text-sm font-bold mb-2 pt-3' for='submatter'>Subject Matter</label>
-                <textarea className='shadow border  rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline h-28' id='message' placeholder='write message here'></textarea>
+                <label className='block text-gray-300 text-sm font-bold mb-2 pt-3' for='submatter'>Message</label>
+                <textarea className='shadow border  rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline h-28' id='message' placeholder='Write Message here'></textarea>
 
                 <button className='mt-3 p-1 bg-gradient-to-br from-blue-500 via-green-500  to-green-950 rounded-full font-bold max-w-[100px]'>
                     <div className='bg-[#121212] rounded-full'>
