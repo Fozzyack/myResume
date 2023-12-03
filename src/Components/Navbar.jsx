@@ -18,7 +18,7 @@ const Navbar = () => {
     const links = [
         {
             href: 'contacts',
-            title: 'Contacts'
+            title: 'Contact'
         },
         {
             href: 'aboutme',
