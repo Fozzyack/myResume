@@ -24,7 +24,7 @@ const Contact = () => {
 
                     >
                         <h5 className='text-2xl text-center font-bold'>Get in Touch!</h5>
-                        <p>I'm always excited to connect with new people. Whether you have a professional inquiry, want to discuss potential collaborations, or just want to say hello, I'd love to hear from you. Your messages are important, and I'm here and ready to respond. Feel free to reach out – I look forward to connecting with you! </p>
+                        <p className='text-center  md:text-left'>I'm always excited to connect with new people. Whether you have a professional inquiry, want to discuss potential collaborations, or just want to say hello, I'd love to hear from you. Your messages are important, and I'm here and ready to respond. Feel free to reach out – I look forward to connecting with you! </p>
                         <div className='grid md:grid-cols-4 grid-cols-2 mt-5'>
                             <Link className='flex flex-col items-center' to={'https://github.com/Fozzyack'}>
                                 <img src={githublogo} alt='Github Logo' className='w-[50px] ' />
