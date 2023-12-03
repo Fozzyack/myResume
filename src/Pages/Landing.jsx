@@ -8,20 +8,20 @@ import Testimonials from '../Components/Testimonials';
 const Landing = () => {
 
     return (
-        <main className='flex min-h-screen bg-[#121212]'>
+        <main className='flex w-screen border border-green-500 min-h-screen bg-[#121212]'>
             <Navbar />
             <div className='py-24'>
                 <div className='px-16'>
                     <Hero />
                 </div>
 
-                <div className='bg-[#1f1d1d] rounded-xl px-16 mt-10'>
+                <div className='bg-[#1f1d1d] rounded-xl mt-10'>
                     <AboutMe />
                 </div>
                 <div className='px-16 mt-10'>
                     <Projects />
                 </div>
-                <div className='px-16 mt-10 bg-[#1f1d1d] rounded-xl'>
+                <div className=' mt-10 bg-[#1f1d1d] rounded-xl max-w-screen'>
                     <Testimonials />
                 </div>
 
