@@ -14,16 +14,10 @@ const Navbar = ({aboutRef, testimonialRef, projectRef}) => {
         setOpenMenu(false);
     }
 
-    const scrollToReference = (elementReference) => {
-        window.scrollTo({
-            top:  elementReference.current.offsetTop,
-            behavior: 'smooth'
-        });
-    }
 
     const links = [
         {
-            href: '#contacts',
+            href: 'main',
             title: 'Contacts'
         },
         {

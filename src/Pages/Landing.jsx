@@ -11,7 +11,7 @@ const Landing = () => {
     const projectsRef = useRef(null);
     const testimonialRef = useRef(null)
     return (
-        <main className='flex w-screen bg-[#121212]'>
+        <main id='main' className='flex w-screen bg-[#121212]'>
             <Navbar aboutRef={aboutRef} projectsRef={projectsRef} testimonialRef={testimonialRef}/>
             <div className='py-24'>
                 <div className='px-16'>
