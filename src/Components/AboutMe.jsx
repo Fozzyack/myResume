@@ -124,7 +124,7 @@ const AboutMe = () => {
                             <TabSwapper selectTab={() => changeTab("other")} active={tab === "other"}>Other Skills</TabSwapper>
                             <TabSwapper selectTab={() => changeTab("hobbies")} active={tab === "hobbies"}>Hobbies</TabSwapper>
                         </div>
-                        <motion.div className='mt-8 '
+                        <motion.div className='px-5 '
                             animate={isOpen ? 'open' : 'closed'}
                             variants={variants}
                         >
