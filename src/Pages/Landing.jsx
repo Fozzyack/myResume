@@ -8,7 +8,7 @@ import Testimonials from '../Components/Testimonials';
 const Landing = () => {
 
     return (
-        <main className='flex w-screen border border-green-500 min-h-screen bg-[#121212]'>
+        <main className='flex w-screen bg-[#121212]'>
             <Navbar />
             <div className='py-24'>
                 <div className='px-16'>
