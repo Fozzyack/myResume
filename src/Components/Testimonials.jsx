@@ -28,7 +28,11 @@ const TESTIMONIAL_INFO = [
 const Testimonials = () => {
     return (
         <section id='testimonials'>
-            <div className='p-10'>
+            <motion.div className='p-10'
+                initial={{opacity: 0}}
+                whileInView={{opacity: 1}}
+                viewport={{once: false}}
+            >
                 <h5 className='font-bold text-white text-center text-3xl'>
                     Testimonials
                 </h5>
@@ -47,7 +51,7 @@ const Testimonials = () => {
                         ))
                     }
                 </div>
-            </div>
+            </motion.div>
         </section>
 
     )
