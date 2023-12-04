@@ -29,9 +29,9 @@ const Testimonials = () => {
     return (
         <section id='testimonials'>
             <motion.div className='p-10'
-                initial={{opacity: 0}}
-                whileInView={{opacity: 1}}
-                viewport={{once: true}}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.8, ease: 'easeOut' }}
             >
                 <h5 className='font-bold text-white text-center text-3xl'>
@@ -40,14 +40,24 @@ const Testimonials = () => {
                 <div className='md:grid md:grid-cols-3 gap-5 my-4 text-white'>
                     {
                         TESTIMONIAL_INFO.map((testimonial, index) => (
-                            <motion.div key={index} className='flex p-1 bg-gradient-to-br from-[#31CB00] via-[#2a7221] to-[#1766b5] rounded-xl mt-3'
-                                whileHover={{ scale: 1.1 }}
+                            <motion.div key={index} className=''
+                                initial={{ scale: 0 }}
+                                whileInView={{ scale: 1 }}
+                                transition={{ type: 'spring', stiffness: 200, damping: 20, delay: (index + 1) * 0.7 }}
+                                viewport={{ once: true }}
                             >
-                                <div className='bg-[#121212] p-4 border rounded-xl w-full '>
-                                    <p>"{testimonial.content}"</p>
-                                    <br></br>
-                                    <p>- {testimonial.name}, {testimonial.relation} {testimonial.job}</p>
-                                </div>
+                                <motion.div
+                                    whileHover={{ scale: 1.1 }}
+                                    className='flex mt-3 p-1 bg-gradient-to-br from-[#31CB00] via-[#2a7221] to-[#1766b5] rounded-xl h-full'>
+                                    <div className='bg-[#121212] p-4 border rounded-xl w-full'
+
+                                    >
+                                        <p>"{testimonial.content}"</p>
+                                        <br></br>
+                                        <p>- {testimonial.name}, {testimonial.relation} {testimonial.job}</p>
+                                    </div>
+                                </motion.div>
+
                             </motion.div>
                         ))
                     }
