@@ -19,3 +19,5 @@ As I lack webdevelopment experience I took some ideas from [webcoded](https://ww
 #### Thoughts
 - Front End is difficult when you dont have a UI/UX Designer
 - I don't like how githubs links are done the opposite way to Obsidian
+- Organisation of Files could have been done better
+- TailwindCSS is awesome
