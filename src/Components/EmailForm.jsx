@@ -21,14 +21,14 @@ const EmailForm = () => {
         const emailInput = document.getElementById('email_for_contact');
         console.log(emailInput.value)
         if (validateEmail(emailInput.value)) {
-            // emailjs.sendForm('resume_service_email', 'template_qg03z8u', form.current, process.env.REACT_APP_EMAIL_PUBLIC_KEY)
-            //     .then((result) => {
-            //         console.log('Email Success');
-            //     }, (error) => {
-            //         console.log(error.text);
-            //         setErrorMSG2('There was an Error Sending Your Email')
-            //         return setEmailSent('not_sent');
-            //     });
+            emailjs.sendForm('resume_service_email', 'template_qg03z8u', form.current, process.env.REACT_APP_EMAIL_PUBLIC_KEY)
+                .then((result) => {
+                    console.log('Email Success');
+                }, (error) => {
+                    console.log(error.text);
+                    setErrorMSG2('There was an Error Sending Your Email')
+                    return setEmailSent('not_sent');
+                });
 
             setTimeout(() => {
                 setErrorMSG('');
