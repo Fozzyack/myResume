@@ -12,7 +12,7 @@ const Landing = () => {
         <main id='main' className='flex bg-[#121212]'>
             <Navbar />
 
-            <div className='py-24'>
+            <div className='py-32'>
                 <div className='px-16'>
                     <Hero />
                 </div>
