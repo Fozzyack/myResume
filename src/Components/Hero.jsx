@@ -1,9 +1,8 @@
 import React from 'react'
-import HeroImag from '../assets/abo4.png'
+import HeroImag from '../assets/abo4-removebg.png'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion';
 import Counter from './Counter';
-import { Link } from 'react-router-dom';
 
 const Hero = () => {
 
