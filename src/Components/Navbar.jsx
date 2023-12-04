@@ -43,7 +43,7 @@ const Navbar = () => {
             <div className='flex flex-wrap items-center justify-between mx-auto  px-4 py-2'>
                 <button className='text-white text-sm md:text-4xl font-semibold flex items-center' onClick={(e) => {scrollToReference(e, 'main')}}>
                     <img src={logo} alt='logo' className='w-[90px]'/>
-                    <p className='hidden lg:block'> [ UniVersusEmployment.com ]</p>
+                    <p className='hidden lg:block'> [ NoJobNoProb.com ]</p>
                 </button>
                 <div className='mobile-menu block lg:hidden px-3 py-3'>
                     {
