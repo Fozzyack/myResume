@@ -140,7 +140,7 @@ const AboutMe = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.8, ease: 'easeIn' }}
             >
-                <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 md:px-24'>
+                <div className='md:grid md:grid-cols-2 gap-5 items-center py-8 px-4 xl:gap-16 sm:py-16 md:px-24 over'>
 
                     <img src={setup} className='rounded-xl' />
                     <div className='mt-4 md:mt-0 text-left flex flex-col h-full min-h-[600px]'>

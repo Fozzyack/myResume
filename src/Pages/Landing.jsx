@@ -9,27 +9,31 @@ import Contact from '../Components/Contact';
 const Landing = () => {
 
     return (
-        <main id='main' className='flex w-screen bg-[#121212]'>
-            <Navbar/>
+        <main id='main' className='flex bg-[#121212]'>
+            <Navbar />
+
             <div className='py-24'>
                 <div className='px-16'>
                     <Hero />
                 </div>
 
                 <div className='bg-[#1f1d1d] rounded-xl mt-10'>
-                    <AboutMe/>
+                    <AboutMe />
                 </div>
+                
                 <div className='px-16 mt-10'>
                     <Projects />
                 </div>
+                
                 <div className=' mt-10 bg-[#1f1d1d] rounded-xl max-w-screen'>
                     <Testimonials />
                 </div>
+                
                 <div className=' mt-10 px-16'>
                     <Contact />
                 </div>
 
-            </div>
+            </div> 
 
 
 
