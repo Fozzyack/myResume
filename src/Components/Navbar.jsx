@@ -17,32 +17,44 @@ const Navbar = () => {
 
     const links = [
         {
-            href: 'contacts',
-            title: 'Contact'
-        },
-        {
             href: 'aboutme',
-            title: 'About'
+            title: 'About',
+            image: <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                <path d="M19 0H1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1ZM2 6v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6H2Zm11 3a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V8a1 1 0 0 1 2 0h2a1 1 0 0 1 2 0v1Z" />
+            </svg>
         },
         {
             href: 'projects',
-            title: 'Projects'
+            title: 'Projects',
+            image: <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1v14h16m0-9-3-2-3 5-3-2-3 4" />
+            </svg>
         },
         {
             href: 'testimonials',
-            title: 'Testimonials'
-        }
+            title: 'Testimonials',
+            image: <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 17V2a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M5 15V1m8 18v-4"/>
+          </svg>
+        },
+        {
+            href: 'contacts',
+            title: 'Contact',
+            image: <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 18">
+            <path d="M7 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm2 1H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
+          </svg>
+        },
     ]
 
     const scrollToReference = (e, elementReference) => {
         e.preventDefault();
-        document.getElementById(elementReference).scrollIntoView({behavior: 'smooth'})
-    }  
+        document.getElementById(elementReference).scrollIntoView({ behavior: 'smooth' })
+    }
     return (
         <nav className='fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-95'>
             <div className='flex flex-wrap items-center justify-between mx-auto  px-4 py-2'>
-                <button className='text-white text-sm md:text-4xl font-semibold flex items-center' onClick={(e) => {scrollToReference(e, 'main')}}>
-                    <img src={logo} alt='logo' className='w-[90px]'/>
+                <button className='text-white text-sm md:text-4xl font-semibold flex items-center' onClick={(e) => { scrollToReference(e, 'main') }}>
+                    <img src={logo} alt='logo' className='w-[90px]' />
                     <p className='hidden lg:block'> [ NoJobNoProb.com ]</p>
                 </button>
                 <div className='mobile-menu block lg:hidden px-3 py-3'>
@@ -67,7 +79,7 @@ const Navbar = () => {
                     <ul className='flex p-4 md:mt-0 sm:flex-row md:space-x-8 mt-10'>
                         {links.map((link, index) => (
                             <li key={index}>
-                                <NavLink href={link.href} title={link.title} />
+                                <NavLink href={link.href} title={link.title} image={link.image} />
                             </li>
                         ))}
                     </ul>
@@ -75,7 +87,7 @@ const Navbar = () => {
                 </div>
 
             </div>
-            {openMenu ? <NavMenuMobile linklist={links}/> : null}            
+            {openMenu ? <NavMenuMobile linklist={links} /> : null}
 
         </nav>
     )
