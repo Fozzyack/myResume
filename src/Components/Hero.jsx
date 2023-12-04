@@ -3,8 +3,17 @@ import HeroImag from '../assets/abo4-removebg.png'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion';
 import Counter from './Counter';
+import resume from '../assets/Resume/Frasier_Sundra_Resume.pdf'
 
 const Hero = () => {
+
+    const downloadFile = () => {
+        const aTag = document.createElement('a');
+        aTag.href =resume;
+        aTag.setAttribute('download', 'Frasier_Sundra_Resume');
+        aTag.click();
+        aTag.remove();
+    }
 
     return (
         <section>
@@ -54,7 +63,7 @@ const Hero = () => {
 
                     <div>
                         <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 text-white bg-white hover:bg-slate-200 bg-gradient-to-br from-[#31CB00] via-[#2a7221] to-[#1766b5] mt-3'>Hire Me</button>
-                        <button className='px-1 py-1 w-full sm:w-fit rounded-full mr-4 bg-transparent text-white hover:bg-slate-800 bg-gradient-to-br from-[#31CB00] via-[#2a7221] to-[#1766b5] mt-3 hover:animate-pulse'>
+                        <button className='px-1 py-1 w-full sm:w-fit rounded-full mr-4 bg-transparent text-white hover:bg-slate-800 bg-gradient-to-br from-[#31CB00] via-[#2a7221] to-[#1766b5] mt-3 hover:animate-pulse' onClick={() => downloadFile()}>
                             <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>
                                 Download CV
                             </span>

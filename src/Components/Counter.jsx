@@ -38,13 +38,13 @@ const Counter = () => {
                 ease: [0, 0.71, 0.2, 1.01],
             }}
         >
-            <div className='mt-10 md:border rounded-xl py-8 px-17 flex flex-col sm:flex-row items-center justify-between p-10'>
+            <div className='mt-10 md:border rounded-xl py-8 md:flex-row flex-col items-center justify-between hidden md:flex'>
                 {
                     ACHIEVEMENT_INFO.map((achievement, index) => (
-                        <div key={index} className='text-center flex flex-col items-center p-5 md:p-0 border w-full rounded-xl my-1 md:my-0 md:border-none'>
+                        <div key={index} className='text-center flex flex-col items-center p-5 md:p-0 border md:w-full rounded-xl my-1 md:my-0 md:border-none w-[150px]'>
                             <p className='text-base text-[#ADB7BE] font-bold'>{achievement.name}</p>
                             <div className='flex flex-row items-center'>
-                                <h2 className="text-white text-4xl font-bold">
+                                <h2 className="text-white text-2xl font-bold ">
                                     {achievement.prefix}
                                 </h2>
                                 <AnimatedNumbers includeComma
