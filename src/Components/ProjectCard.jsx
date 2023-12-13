@@ -12,7 +12,7 @@ const CARD_INFO = [
         id: 0,
         image: JapWeb,
         title: 'Japanese Web Application',
-        description: 'A Japanese Web application I am currently constructing for my Japanese tutor - Expected Completion: Mid to Late 2024'
+        description: <p>A Japanese Web application I am currently constructing for my Japanese tutor - Expected Completion: Mid to Late 2024. The link to the <Link to='https://github.com/Fozzyack/JapApp' className='text-green-500 border-b border-green-500'>github</Link></p>
     },
     {
         id: 1,
