@@ -37,7 +37,7 @@ const Testimonials = () => {
                 <h5 className='font-bold text-white text-center text-3xl'>
                     Testimonials
                 </h5>
-                <div className='md:grid md:grid-cols-2 gap-5 my-4 text-white'>
+                <div className='md:grid md:grid-cols-3 gap-5 my-4 text-white'>
                     {
                         TESTIMONIAL_INFO.map((testimonial, index) => (
                             <motion.div key={index} className=''

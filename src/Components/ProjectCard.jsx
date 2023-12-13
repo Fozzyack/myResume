@@ -12,7 +12,7 @@ const CARD_INFO = [
     {
         id: 0,
         image: JapWeb,
-        title: 'Japanese Web Application',
+        title: 'Japanese Web Application - Midnight Mari',
         description: <p>A Japanese Web application I am currently constructing for my Japanese tutor - Expected Completion: Mid to Late 2024. The link to the <Link to='https://github.com/Fozzyack/JapApp' className='text-green-500 border-b border-green-500'>github</Link></p>
     },
     {
@@ -24,7 +24,7 @@ const CARD_INFO = [
     {
         id: 2,
         image: rowingIMG,
-        title: 'Rowing Manager',
+        title: 'Rowing Manager - MU Row',
         description: 'Rowing clubs record all their progress manually, this project attempts to solve this problem - Expected Completion: Mid 2024'
     },
     {
@@ -51,12 +51,12 @@ const ProjectCard = () => {
 
 
     return (
-        <div className=' flex flex-col md:grid md:grid-cols-3 gap-10 mt-10 '>
+        <div className=' flex flex-col md:grid md:grid-cols-3 gap-16 mt-10'>
             {
                 CARD_INFO.map((card, index) => (
-                    <div key={index}  className='flex flex-col bg-[#1f1d1d] rounded-xl'>
-                        <img src={card.image} alt='image' className='max-w-full rounded-t-xl'/>
-                        <div className='text-white p-5 border-t'>
+                    <div key={index}  className='flex flex-col bg-[#1f1d1d] rounded-xl border h-[500px]'>
+                        <div className='h-[80%] rounded-xl' style={{backgroundImage: `url(${card.image})`, backgroundSize: 'cover'}}> </div>
+                        <div className='text-white p-5 border-t flex flex-col justify-center'>
                             <h2  className='font-bold'>{card.title}</h2>
                             <p>
                                 {card.description}
