@@ -1,4 +1,4 @@
-# My Personal Resume Website
+# My Portfolio Website
 This Repo contains all the code for the personal website which can currently be found [here!](https://frasier-sundra.netlify.app)
 
 ## Frameworks
