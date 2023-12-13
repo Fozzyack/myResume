@@ -57,7 +57,7 @@ const ProjectCard = () => {
                     <div key={index}  className='flex flex-col bg-[#1f1d1d] rounded-xl border h-[500px]'>
                         <div className='h-[80%] rounded-xl' style={{backgroundImage: `url(${card.image})`, backgroundSize: 'cover'}}> </div>
                         <div className='text-white p-5 border-t flex flex-col justify-center'>
-                            <h2  className='font-bold'>{card.title}</h2>
+                            <h2 className='font-bold'>{card.title}</h2>
                             <p>
                                 {card.description}
                             </p>
