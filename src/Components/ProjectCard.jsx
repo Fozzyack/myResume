@@ -4,6 +4,7 @@ import timerIMG from '../assets/ProjectImgs/test.png'
 import rowingIMG from '../assets/ProjectImgs/Rowing.png'
 import webImage from '../assets/ProjectImgs/Github.JPG'
 import ThisWebsite from '../assets/ProjectImgs/ThisWebsite.JPG'
+import HiguVT from '../assets/ProjectImgs/HiguVT.JPG'
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -38,6 +39,13 @@ const CARD_INFO = [
         title: 'This Website',
         description: <p>The Website you are currently looking at! Been in development for: 3 days The Github repo for this site can be found <Link to='https://github.com/Fozzyack/myResume' className='text-green-500 border-b border-green-500'>here</Link></p>
     },
+    {
+        id: 5,
+        image: HiguVT,
+        title: 'HIGU VT',
+        description: <p>I had a simple clean static website for a VTuber <Link to='higu-vt.netlify.app' className='text-blue-600 border-b'>The Site Can be Found here</Link> <Link to='https://github.com/Fozzyack/higu-vt' className='text-green-500 border-b border-green-500'>Github</Link></p>
+    },
+    
 ]
 const ProjectCard = () => {
 
