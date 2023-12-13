@@ -17,7 +17,7 @@ const Landing = () => {
                     <Hero />
                 </div>
 
-                <div className='bg-[#1f1d1d] rounded-xl mt-10'>
+                <div className='bg-[#1f1d1d] mt-10'>
                     <AboutMe />
                 </div>
                 

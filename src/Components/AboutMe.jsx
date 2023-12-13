@@ -151,17 +151,17 @@ const AboutMe = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.8, ease: 'easeIn' }}
             >
-                <div className='md:grid md:grid-cols-2 gap-5 items-center py-8 px-4 xl:gap-16 sm:py-16 md:px-24 over'>
+                <div className='md:grid md:grid-cols-2 gap-5 justify-center items-center py-8 px-4 xl:gap-16 sm:py-16 md:px-24 over'>
 
-                    <img src={setup} className='rounded-xl' />
+                    <img src={setup} className='rounded-xl max-h-[700px]' />
                     <div className='mt-4 md:mt-0 text-left flex flex-col h-full min-h-[600px]'>
                         <h2 className='text-white text-4xl font-semibold mb-4'>
                             About Me
                         </h2>
                         <p className='text-base md:text-lg'>
-                        Hey there! I'm Frasier, a university student delving into the exciting realm of full-stack web development. Currently pursuing a degree in Software Engineering at The University of Western Australia, I'm enthusiastic about applying my academic knowledge to real-world applications.
+                            Hey there! I'm Frasier, a university student delving into the exciting realm of full-stack web development. Currently pursuing a degree in Software Engineering at The University of Western Australia, I'm enthusiastic about applying my academic knowledge to real-world applications.
 
-While navigating the academic landscape, I've been actively engaged in honing my skills and creating intuitive web experiences. My portfolio offers a glimpse into my journey, featuring a few impactful projects that showcase my proficiency in both front-end and back-end technologies. Despite having a modest collection of web projects, I'm driven and eager to contribute my skills to innovative initiatives through an internship. Let's connect and explore the possibilities of creating something awesome together!
+                            While navigating the academic landscape, I've been actively engaged in honing my skills and creating intuitive web experiences. My portfolio offers a glimpse into my journey, featuring a few impactful projects that showcase my proficiency in both front-end and back-end technologies. Despite having a modest collection of web projects, I'm driven and eager to contribute my skills to innovative initiatives through an internship. Let's connect and explore the possibilities of creating something awesome together!
                         </p>
                         <div className='flex flex-row mt-8'>
                             <TabSwapper selectTab={() => changeTab("hardskills")} active={tab === "hardskills"}>Hard Skills</TabSwapper>

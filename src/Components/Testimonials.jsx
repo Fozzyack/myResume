@@ -11,17 +11,17 @@ const TESTIMONIAL_INFO = [
     },
     {
         id: 1,
-        name: 'Ian',
-        relation: 'Boss',
-        job: ', SUPA IGA Northbridge',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ullam praesentium aliquid rem beatae sit repellendus pariatur, voluptate quaerat, tempora ducimus quos est vero laborum! Dolor quibusdam ratione architecto illo.',
+        name: 'HiguVT',
+        relation: 'Client',
+        job: 'VTuber',
+        content: "Really quickly designed me an excelent clean site",
     },
     {
-        id: 1,
-        name: 'Luke',
-        relation: 'Friend',
-        job: '',
-        content: "F**k he's good",
+        id: 2,
+        name: 'Ian',
+        relation: 'Boss',
+        job: 'IGA Northbridge Manager',
+        content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dignissimos, iste id facilis enim dolores necessitatibus aut ipsam, omnis quas eveniet odio accusantium unde voluptatem. Ea ullam itaque corrupti dolore?',
     },
 
 ]
@@ -37,7 +37,7 @@ const Testimonials = () => {
                 <h5 className='font-bold text-white text-center text-3xl'>
                     Testimonials
                 </h5>
-                <div className='md:grid md:grid-cols-3 gap-5 my-4 text-white'>
+                <div className='md:grid md:grid-cols-2 gap-5 my-4 text-white'>
                     {
                         TESTIMONIAL_INFO.map((testimonial, index) => (
                             <motion.div key={index} className=''
