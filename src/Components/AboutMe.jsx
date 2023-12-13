@@ -10,12 +10,13 @@ const SECTION_INFO = [
         id: 'hardskills',
         content: (
             <ul>
-                <li className='text-white font-bold'>Web Development (PERN STACK)</li>
+                <li className='text-white font-bold'>Web Development</li>
                 <ul className='list-disc ml-4'>
                     <li>PostgreSQL</li>
                     <li>ExpressJS</li>
                     <li>ReactJS</li>
                     <li>NodeJS</li>
+                    <li>NextJS</li>
                     <li>Bootstrap</li>
                     <li>TailwindCSS</li>
                     <li>MUI</li>
@@ -69,11 +70,20 @@ const SECTION_INFO = [
                 <li>
                     <span className='font-bold text-white'>HighSchool:</span> Trinity College 2017 Graduate</li>
                 <li className='mt-1'><span className='font-bold text-white'>University:</span> Bachelor of Commerce and Master of Professional Engineering Pathway - <span className='font-italic italic underline'>Still Studying</span></li>
+                <li className='font-bold'> Related Courses</li>
+                <ul className='ml-3 list-disc'>
+                    <li>Computer Networks</li>
+                    <li>Digital Embedded Systems</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Web Development</li>
+                    <li>Professional Computer</li>
+                    <li>CyberSecurity</li>
+                </ul>
             </ul>
         )
     },
     {
-        title: 'Other Skills',
+        title: 'Languages and Other Skills',
         id: 'other',
         content: (
             <ul>
@@ -91,6 +101,7 @@ const SECTION_INFO = [
                     <li>Java</li>
                     <li>C</li>
                     <li>JavaScript</li>
+                    <li>TypeScript</li>
                 </ul>
 
             </ul>
@@ -148,13 +159,15 @@ const AboutMe = () => {
                             About Me
                         </h2>
                         <p className='text-base md:text-lg'>
-                            I am a University student who does some fullstack web development on the side and am currently looking for an internship.
+                        Hey there! I'm Frasier, a university student delving into the exciting realm of full-stack web development. Currently pursuing a degree in Software Engineering at The University of Western Australia, I'm enthusiastic about applying my academic knowledge to real-world applications.
+
+While navigating the academic landscape, I've been actively engaged in honing my skills and creating intuitive web experiences. My portfolio offers a glimpse into my journey, featuring a few impactful projects that showcase my proficiency in both front-end and back-end technologies. Despite having a modest collection of web projects, I'm driven and eager to contribute my skills to innovative initiatives through an internship. Let's connect and explore the possibilities of creating something awesome together!
                         </p>
                         <div className='flex flex-row mt-8'>
                             <TabSwapper selectTab={() => changeTab("hardskills")} active={tab === "hardskills"}>Hard Skills</TabSwapper>
                             <TabSwapper selectTab={() => changeTab("softskills")} active={tab === "softskills"}>Soft Skills</TabSwapper>
                             <TabSwapper selectTab={() => changeTab("education")} active={tab === "education"}>Education</TabSwapper>
-                            <TabSwapper selectTab={() => changeTab("other")} active={tab === "other"}>Other Skills</TabSwapper>
+                            <TabSwapper selectTab={() => changeTab("other")} active={tab === "other"}>Languages and Other Skills</TabSwapper>
                             <TabSwapper selectTab={() => changeTab("hobbies")} active={tab === "hobbies"}>Hobbies</TabSwapper>
                         </div>
                         <motion.div className='px-5 mt-4'
