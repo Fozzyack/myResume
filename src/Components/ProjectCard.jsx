@@ -4,7 +4,7 @@ import timerIMG from '../assets/ProjectImgs/test.png'
 import rowingIMG from '../assets/ProjectImgs/Rowing.png'
 import webImage from '../assets/ProjectImgs/Github.JPG'
 import ThisWebsite from '../assets/ProjectImgs/ThisWebsite.JPG'
-import HiguVT from '../assets/ProjectImgs/HiguVT.JPG'
+import HiguVT from '../assets/ProjectImgs/HiguVt.JPG'
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -43,88 +43,28 @@ const CARD_INFO = [
         id: 5,
         image: HiguVT,
         title: 'HIGU VT',
-        description: <p>I had a simple clean static website for a VTuber <Link to='higu-vt.netlify.app' className='text-blue-600 border-b'>The Site Can be Found here</Link> <Link to='https://github.com/Fozzyack/higu-vt' className='text-green-500 border-b border-green-500'>Github</Link></p>
+        description: <p>I had a simple clean static website for a VTuber / Twitch Streamer. <Link to='https://higu-vt.netlify.app' className='text-blue-300'>The Site Can be Found here</Link> || <Link to='https://github.com/Fozzyack/higu-vt' className='text-green-500 border-b border-green-500'>Github</Link></p>
     },
-    
+
 ]
 const ProjectCard = () => {
 
-    const [index, setIndex] = useState(0);
-    const [backresent, setBackReset] = useState('cover')
-    const variants = {
-        showSlide: { opacity: 1, x: 0 },
-        closeSlide: { opacity: 0, x: '100%' }
-    }
-    const [show, setShow] = useState(true);
-
-    const handleNextSlide = () => {
-        setShow(false);
-        setBackReset('contain');
-
-        setTimeout(() => {
-            if (index === CARD_INFO.length - 1) {
-                setIndex(0);
-            }
-            else { setIndex(prevIndex => prevIndex + 1) };
-            setBackReset('cover');
-        }, 200)
-
-        setTimeout(() => {
-            setShow(true);
-        }, 1000);
-
-
-    };
-
-    const handlePrevSlide = () => {
-
-        setShow(false);
-        setBackReset('contain');
-        setTimeout(() => {
-            if (index === 0) {
-                setIndex(CARD_INFO.length - 1);
-            }
-            else { setIndex(prevIndex => prevIndex - 1) };
-            setBackReset('cover');
-        }, 200)
-
-        setTimeout(() => {
-            setShow(true);
-        }, 1000);
-
-    };
 
     return (
-        <div >
-            <motion.div className={` mt-10`}
-                initial={true}
-                animate={show ? 'showSlide' : 'closeSlide'}
-                variants={variants}
-            >
-                <div className='border border-white rounded-xl'>
-                    <div className='lg:h-[700px] md:h-[500px] h-72 rounded-t-xl' style={{ background: `url(${CARD_INFO[index].image})`, backgroundSize: `${backresent}`, backgroundPosition: 'center' }}>
+        <div className=' flex flex-col md:grid md:grid-cols-3 gap-10 mt-10 '>
+            {
+                CARD_INFO.map((card, index) => (
+                    <div key={index}  className='flex flex-col bg-[#1f1d1d] rounded-xl'>
+                        <img src={card.image} alt='image' className='max-w-full rounded-t-xl'/>
+                        <div className='text-white p-5 border-t'>
+                            <h2  className='font-bold'>{card.title}</h2>
+                            <p>
+                                {card.description}
+                            </p>
+                        </div>
                     </div>
-                    <div className='text-white rounded-b-xl p-3 bg-[#1f1d1d] border-t border-white'>
-                        <h4 className='font-bold text-lg'>{CARD_INFO[index].title}</h4>
-                        <p>{CARD_INFO[index].description}</p>
-                    </div>
-                </div>
-
-            </motion.div>
-
-            <div className='text-white text-center space-x-3 mt-3'>
-                <button onClick={() => { handlePrevSlide() }}>
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13" />
-                    </svg>
-                </button>
-                <button onClick={() => { handleNextSlide() }}>
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
-                    </svg>
-                </button>
-
-            </div>
+                ))
+            }
         </div>
     )
 
