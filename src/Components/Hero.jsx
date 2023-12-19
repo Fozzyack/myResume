@@ -7,6 +7,11 @@ import resume from '../assets/Resume/Frasier_Sundra_Resume.pdf'
 
 const Hero = () => {
 
+    const scrollToReference = (e, elementReference) => {
+        e.preventDefault();
+        document.getElementById(elementReference).scrollIntoView({behavior: 'smooth'})
+    }
+
     const downloadFile = () => {
         const aTag = document.createElement('a');
         aTag.href =resume;
@@ -62,7 +67,7 @@ const Hero = () => {
                         
 
                     <div>
-                        <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 text-white bg-white hover:bg-slate-200 bg-gradient-to-br from-[#31CB00] via-[#2a7221] to-[#1766b5] mt-3'>Hire Me</button>
+                        <button onClick={(e) => {scrollToReference(e, 'contacts')}} className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 text-white bg-white hover:bg-slate-200 bg-gradient-to-br from-[#31CB00] via-[#2a7221] to-[#1766b5] mt-3'>Contact Me</button>
                         <button className='px-1 py-1 w-full sm:w-fit rounded-full mr-4 bg-transparent text-white hover:bg-slate-800 bg-gradient-to-br from-[#31CB00] via-[#2a7221] to-[#1766b5] mt-3 hover:animate-pulse' onClick={() => downloadFile()}>
                             <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>
                                 Download CV
