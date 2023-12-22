@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroImag from '../assets/abo4-removebg.png'
+import HeroImag from '../assets/HeroImage2.png'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion';
 import Counter from './Counter';
