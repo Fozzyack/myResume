@@ -5,7 +5,7 @@ import AnimatedNumbers from 'react-animated-numbers';
 const ACHIEVEMENT_INFO = [
     {
         name: 'Bugs Fixed',
-        value: 1982,
+        value: 2004,
         prefix: '~',
         postfix: ''
     },
@@ -22,7 +22,7 @@ const ACHIEVEMENT_INFO = [
     },
     {
         name: 'Longest Time without Distraction',
-        value: 1,
+        value: 20,
         postfix: 'hr(s)'
     },
 ]
