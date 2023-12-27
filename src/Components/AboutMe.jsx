@@ -112,10 +112,10 @@ const SECTION_INFO = [
         id: 'hobbies',
         content: (
             <ul className='list-disc'>
-                <li>Scuba Diving (Advanced Scuba Certification)</li>
-                <li>Studying Japanese 日本語！</li>
-                <li>Muay Thai</li>
-                <li>Gyms</li>
+                <li>Scuba Diving (Advanced Scuba Certification) 🤿</li>
+                <li>Studying Japanese 日本語！ 🎌</li>
+                <li>Muay Thai 🥊</li>
+                <li>Gym 💪</li>
             </ul>
         )
     }
