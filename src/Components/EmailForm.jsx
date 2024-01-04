@@ -48,7 +48,7 @@ const EmailForm = () => {
     if (emailSent === 'not_sent') {
         return (
             <div className='text-white w-full'>
-                <form ref={form} className='bg-[#1f1d1d] p-10 rounded-xl flex flex-col' onSubmit={sendEmail}>
+                <form ref={form} className='bg-[#121212] p-10 rounded-xl flex flex-col' onSubmit={sendEmail}>
                     <h5 className='font-bold text-white text-3xl'>Send me a Message</h5>
 
                     <label className='block text-gray-300 text-sm font-bold mb-2 mt-5' for='name'>Name</label>

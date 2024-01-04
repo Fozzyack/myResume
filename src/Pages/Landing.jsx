@@ -17,19 +17,19 @@ const Landing = () => {
                     <Hero />
                 </div>
 
-                <div className='bg-[#1f1d1d] mt-10'>
+                <div className='bg-[#070606] mt-10'>
                     <AboutMe />
                 </div>
                 
-                <div className='px-16 mt-10'>
+                <div className='px-16 my-10'>
                     <Projects />
                 </div>
                 
-                <div className=' mt-10 bg-[#1f1d1d] rounded-xl max-w-screen'>
+                {/* <div className=' mt-10 bg-[#1f1d1d] rounded-xl max-w-screen'>
                     <Testimonials />
-                </div>
+                </div> */}
                 
-                <div className=' mt-10 px-16'>
+                <div className=' mt-10 px-16 bg-[#070606] py-12'>
                     <Contact />
                 </div>
 

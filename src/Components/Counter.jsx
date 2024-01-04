@@ -22,7 +22,7 @@ const ACHIEVEMENT_INFO = [
     },
     {
         name: 'Longest Time without Distraction',
-        value: 20,
+        value: 0.5,
         postfix: 'hr(s)'
     },
 ]
