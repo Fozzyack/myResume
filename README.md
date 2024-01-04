@@ -1,6 +1,6 @@
 # My Portfolio Website
 This Repo contains all the code for the personal website which can currently be found [here!](https://frasier-sundra.netlify.app)
-![HeroImage](resume/src/assets/HeroImage2-removebg.png)
+![HeroImage](./src/assets/HeroImage2-removebg.png)
 ## Frameworks
 * [![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
 * [![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
