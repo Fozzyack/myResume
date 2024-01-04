@@ -16,7 +16,7 @@ Extra packages include
 ## Deployment
 Deployment was done on [![DigitalOcean](https://img.shields.io/badge/DigitalOcean-%230167ff.svg?style=for-the-badge&logo=digitalOcean&logoColor=white)](https://www.digitalocean.com/) but has now been moved to [![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)](https://www.netlify.com/)
 ### Credit
-As I lack webdevelopment experience I took some ideas from [webcoded](https://www.youtube.com/watch?v=Kb1f5bvF6f4&t=4985s&ab_channel=webdecoded)
+As I lack web dev experience at the time of this project I took some ideas from [webcoded](https://www.youtube.com/watch?v=Kb1f5bvF6f4&t=4985s&ab_channel=webdecoded)
 #### Thoughts
 - Front End is difficult when you dont have a UI/UX Designer
 - I don't like how githubs links are done the opposite way to Obsidian
