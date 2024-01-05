@@ -24,7 +24,7 @@ const CARD_INFO = [
         title: 'ACICIS Student Organiser',
         description: <p>A University Project which was a WebApp that helped ACICIS with their student management in which it helped chose students to send on overseas scholarships - Completed: December 2024'. </p>,
         link: '',
-        github: 'https://github.com/incman7/CITS3200_Group12'
+        github: ''
     },
     {
         id: 2,
