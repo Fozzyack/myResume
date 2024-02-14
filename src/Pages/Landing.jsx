@@ -5,6 +5,7 @@ import AboutMe from '../Components/AboutMe';
 import Projects from '../Components/Projects';
 import Testimonials from '../Components/Testimonials';
 import Contact from '../Components/Contact';
+import TechStack from '../Components/TechStack';
 
 const Landing = () => {
 
@@ -28,6 +29,10 @@ const Landing = () => {
                 {/* <div className=' mt-10 bg-[#1f1d1d] rounded-xl max-w-screen'>
                     <Testimonials />
                 </div> */}
+
+                <div className=' mt-10 px-16 py-12 bg-[#070606]'>
+                    <TechStack />
+                </div>
                 
                 <div className=' mt-10 px-16 bg-[#070606] py-12'>
                     <Contact />
