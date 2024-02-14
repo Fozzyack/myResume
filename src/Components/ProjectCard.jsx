@@ -79,7 +79,7 @@ const ProjectCard = () => {
                     <motion.div 
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
-                    transition={{delay: 0.5 * index}}
+                    transition={{delay:0.2 * index}}
                     viewport={{once: true}}
                     key={index} className='flex flex-col bg-black h-[550px] w-[250px] text-center items-center p-4 shadow-lg'>
             
