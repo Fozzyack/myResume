@@ -4,7 +4,7 @@ const TechList = ({ title, list }) => {
 	return (
 		<div className="flex flex-col gap-4">
 			<h3 className="text-xl text-white font-bold">{title}</h3>
-			<div className="flex flex-row gap-4 items-center flex-wrap">
+			<div className="flex flex-row gap-4 justify-center items-center flex-wrap">
 				{list.map((tech, index) => (
 					<motion.div
                         initial={{ opacity: 0, y: -50 }}
