@@ -9,7 +9,7 @@ const TechList = ({ title, list }) => {
 					<motion.div
                         initial={{ opacity: 0, y: -50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{delay: Math.floor(Math.random() * 100) / 12 * 0.2 }}
+                        transition={{delay: Math.floor(Math.random() * 100) / 12 * 0.2 + 0.4}}
 						key={index}
                         viewport={{once: true}}
                     >
