@@ -110,7 +110,7 @@ const TechStack = () => {
 			<div className="my-4 flex flex-col gap-4 items-center text-center">
                 <TechList title="Languages" list={LANGUAGES} />
                 <TechList title="Frameworks" list={FRAMEWORKS} />
-                <TechList title="Libraries and Toosl" list={TOOLS_LIBRARIES} />
+                <TechList title="Libraries and Tools" list={TOOLS_LIBRARIES} />
                 <TechList title="Operating Systems and Distros" list={OPERATING_SYSTEMS_DISTROS} />
 				<div>
 					<span className="text-white">Icons provided by: </span>
