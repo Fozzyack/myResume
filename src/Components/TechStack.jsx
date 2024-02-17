@@ -37,7 +37,7 @@ const FRAMEWORKS = [
 	},
 	{
 		name: "Next",
-		icon: "https://img.icons8.com/color/48/000000/next.png",
+		icon: "https://img.icons8.com/nolan/64/nextjs.png",
 	},
 	{
 		name: "Express",
