@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import JapWeb from '../assets/ProjectImgs/JapWeb.png';
-import timerIMG from '../assets/ProjectImgs/test.png'
-import rowingIMG from '../assets/ProjectImgs/Rowing.png'
 import webImage from '../assets/ProjectImgs/ACICIS.JPG'
 import ThisWebsite from '../assets/HeroImage2-removebg.png'
 import HiguVT from '../assets/ProjectImgs/HiguVT.png'
+import HeroShiba from '../assets/ProjectImgs/HeroShiba.png'
 import OrangeJuice from '../assets/ProjectImgs/OrangeJuice.png'
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -14,7 +13,7 @@ const CARD_INFO = [
         id: 0,
         image: JapWeb,
         title: 'Midnight Mari',
-        description: <p>A Japanese Web application I am currently constructing for my Japanese tutor - Expected Completion: Mid to Late 2024</p>,
+        description: <p>A Japanese Web application I am currently constructing for my Japanese tutor - Expected Completion: Mid to Late 2024. As of January this project is on halt and will be merged witgh JLSM. Another project on this list.</p>,
         link: '',
         github: 'https://github.com/Fozzyack/JapApp'
     },
@@ -30,7 +29,7 @@ const CARD_INFO = [
         id: 2,
         image: ThisWebsite,
         title: 'This Website',
-        description: <p>The Website you are currently looking at! Been in development for: 3 days The Github repo for this site can be found.</p>,
+        description: <p>My Portfolio</p>,
         link: 'https://frasier-sundra.netlify.app',
         github: 'https://github.com/Fozzyack/myResume'
     },
@@ -42,23 +41,6 @@ const CARD_INFO = [
         link: 'https://higu-vt.netlify.app',
         github: 'https://github.com/Fozzyack/higu-vt'
     },
-
-    {
-        id: 5,
-        image: timerIMG,
-        title: '3D Printing Timer',
-        description: 'A 3D Printing Project to make mechanical 7 segment displays to make a timer with - Expected Completion: Jan 2024',
-        link: '',
-        github: ''
-    },
-    {
-        id: 6,
-        image: rowingIMG,
-        title: 'Rowing Manager - MU Row',
-        description: 'Rowing clubs record all their progress manually, this project attempts to solve this problem - Expected Completion: Mid 2024',
-        link: '',
-        github: ''
-    },
     {
         id: 4,
         image: OrangeJuice,
@@ -66,6 +48,14 @@ const CARD_INFO = [
         description: <p>A Simple fitness app that I use to track my gym progress.</p>,
         link: 'https://active-orange.comp',
         github: 'https://github.com/Fozzyack/activeorange'
+    },
+    {
+        id: 4,
+        image: HeroShiba, 
+        title: 'JLSM',
+        description: <p>A learning management system that is still being built for a Japanese Language learning school.</p>,
+        link: '',
+        github: 'https://github.com/Fozzyack/JLSM_v2.0'
     },
 
 ]
