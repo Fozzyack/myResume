@@ -13,7 +13,9 @@ const CARD_INFO = [
         id: 0,
         image: JapWeb,
         title: 'Midnight Mari',
-        description: <p>A Japanese Web application I am currently constructing for my Japanese tutor - Expected Completion: Mid to Late 2024. As of January this project is on halt and will be merged witgh JLSM. Another project on this list.</p>,
+        description: <p>A Japanese Web application I am currently constructing for my Japanese tutor 
+        - Expected Completion: Mid to Late 2024. 
+        As of January this project is on halt and will be merged with JLSM at a later date.(JLSM is another project on this list)</p>,
         link: '',
         github: 'https://github.com/Fozzyack/JapApp'
     },
@@ -29,7 +31,7 @@ const CARD_INFO = [
         id: 2,
         image: ThisWebsite,
         title: 'This Website',
-        description: <p>My Portfolio</p>,
+        description: <p>My Portfolio, used to help display my achievements (or lack thereof...)</p>,
         link: 'https://frasier-sundra.netlify.app',
         github: 'https://github.com/Fozzyack/myResume'
     },
@@ -37,7 +39,8 @@ const CARD_INFO = [
         id: 3,
         image: HiguVT,
         title: 'HIGU VT',
-        description: <p>I had a simple clean static website for a VTuber / Twitch Streamer.</p>,
+        description: <p>A simple clean static website I build 
+        for a VTuber / Twitch Streamer.</p>,
         link: 'https://higu-vt.netlify.app',
         github: 'https://github.com/Fozzyack/higu-vt'
     },
