@@ -53,7 +53,9 @@ const CARD_INFO = [
         id: 4,
         image: HeroShiba, 
         title: 'JLSM',
-        description: <p>A learning management system that is still being built for a Japanese Language learning school.</p>,
+        description: <p>A learning management system that is being built for a Japanese language learning school.
+        It's current objective is to help automate and ease the organisation of students and payments.
+        Later on, it will help set up school events and will include some aspects of popular language learning apps.</p>,
         link: '',
         github: 'https://github.com/Fozzyack/JLSM_v2.0'
     },
