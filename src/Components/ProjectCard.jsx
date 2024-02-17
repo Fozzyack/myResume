@@ -76,7 +76,7 @@ const ProjectCard = () => {
                     whileInView={{opacity: 1}}
                     transition={{delay:0.2 * index}}
                     viewport={{once: true}}
-                    key={index} className='flex flex-col bg-black h-[550px] w-[250px] text-center items-center p-4 shadow-lg'>
+                    key={index} className='flex flex-col bg-black h-[550px] w-[350px] text-center items-center p-4 py-8 shadow-lg'>
             
                         <img src={card.image} alt='projectImg' className='border rounded-full h-[90px] w-[90px]'/>
 
