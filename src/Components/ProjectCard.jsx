@@ -23,7 +23,7 @@ const CARD_INFO = [
         id: 1,
         image: webImage,
         title: 'ACICIS Student Organiser',
-        description: <p>A University Project which was a WebApp that helped ACICIS with their student management in which it helped chose students to send on overseas scholarships - Completed: December 2024'. </p>,
+        description: <p>A University Project which was a WebApp that helped ACICIS with their student management in which it helped chose students to send on overseas scholarships - Completed: December 2022'. </p>,
         link: '',
         github: ''
     },
@@ -76,7 +76,7 @@ const ProjectCard = () => {
                     whileInView={{opacity: 1}}
                     transition={{delay:0.2 * index}}
                     viewport={{once: true}}
-                    key={index} className='flex flex-col bg-black h-[550px] w-[350px] text-center items-center p-4 py-8 shadow-lg'>
+                    key={index} className='flex flex-col bg-black h-[650px] w-[250px] md:w-[280px] text-center items-center p-4 py-8 shadow-lg'>
             
                         <img src={card.image} alt='projectImg' className='border rounded-full h-[90px] w-[90px]'/>
 

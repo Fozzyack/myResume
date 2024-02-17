@@ -84,7 +84,7 @@ const OPERATING_SYSTEMS_DISTROS = [
 		icon: "https://img.icons8.com/color/48/000000/windows-10.png",
 	},
 	{
-		name: "Arch Linux",
+		name: "I use arch btw...",
 		icon: "https://img.icons8.com/material-outlined/96/1ca7c9/arch-linux.png",
 	},
 	{

@@ -21,9 +21,16 @@ const SECTION_INFO = [
                     <li>TailwindCSS</li>
                     <li>MUI</li>
                 </ul>
+                <li className='text-white font-bold mt-1'>Machine Learning</li>
+                <ul className='list-disc ml-4'>
+                    <li>pyTorch</li>
+                    <li>Deep Neural Networks</li>
+                </ul>
                 <li className='text-white font-bold mt-1'>Deployment</li>
                 <ul className='list-disc ml-4'>
                     <li>Digital Ocean</li>
+                    <li>Google Cloud</li>
+                    <li>My Home Raspberry Pi Server</li>
                 </ul>
 
 
@@ -69,7 +76,8 @@ const SECTION_INFO = [
             <ul>
                 <li>
                     <span className='font-bold text-white'>HighSchool:</span> Trinity College 2017 Graduate</li>
-                <li className='mt-1'><span className='font-bold text-white'>University:</span> Bachelor of Commerce and Master of Professional Engineering Pathway - <span className='font-italic italic underline'>Still Studying</span></li>
+                <li className='mt-1'><span className='font-bold text-white'>University:</span> Bachelor of Commerce and 
+            Engineering Science (Software Pathway) - <span className='font-italic italic underline'>Still Studying</span></li>
                 <li className='font-bold'> Related Courses</li>
                 <ul className='ml-3 list-disc'>
                     <li>Computer Networks</li>
