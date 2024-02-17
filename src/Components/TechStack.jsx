@@ -32,19 +32,19 @@ const LANGUAGES = [
 
 const FRAMEWORKS = [
 	{
-		name: "React",
+		name: "ReactJS",
 		icon: "https://img.icons8.com/color/48/000000/react-native.png",
 	},
 	{
-		name: "Next",
+		name: "NextJS",
 		icon: "https://img.icons8.com/nolan/64/nextjs.png",
 	},
 	{
-		name: "Express",
+        name: "NodeJS",
 		icon: "https://img.icons8.com/color/48/000000/nodejs.png",
 	},
 	{
-		name: "Tailwind",
+		name: "TailwindCSS",
 		icon: "https://img.icons8.com/color/48/tailwindcss.png",
 	},
 	{
@@ -55,7 +55,7 @@ const FRAMEWORKS = [
 
 const TOOLS_LIBRARIES = [
 	{
-		name: "docker",
+		name: "Docker",
 		icon: "https://img.icons8.com/color/48/000000/docker.png",
 	},
 	{
