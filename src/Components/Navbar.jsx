@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import NavLink from './NavLink';
-import { Link } from 'react-router-dom';
 import NavMenuMobile from './NavMenuMobile';
 import logo from '../assets/noice.png'
 const Navbar = () => {

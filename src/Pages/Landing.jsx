@@ -1,9 +1,8 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import Hero from "../Components/Hero";
 import Navbar from "../Components/Navbar";
 import AboutMe from '../Components/AboutMe';
 import Projects from '../Components/Projects';
-import Testimonials from '../Components/Testimonials';
 import Contact from '../Components/Contact';
 import TechStack from '../Components/TechStack';
 

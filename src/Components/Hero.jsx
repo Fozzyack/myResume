@@ -80,6 +80,7 @@ const Hero = () => {
                     <img
                         src={HeroImag}
                         className='rounded-full w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] bg-[#1f1d1d]'
+                        alt="Hero"
                     />
                 </div>
             </motion.div>
