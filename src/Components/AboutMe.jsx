@@ -161,7 +161,7 @@ const AboutMe = () => {
             >
                 <div className='md:grid md:grid-cols-2 gap-5 justify-center items-center py-8 px-4 xl:gap-16 sm:py-16 md:px-24 over'>
 
-                    <img src={setup} className='rounded-xl max-h-[700px]' />
+                    <img src={setup} className='rounded-xl max-h-[700px]' alt="Setup"/>
                     <div className='mt-4 md:mt-0 text-left flex flex-col h-full min-h-[600px]'>
                         <h2 className='text-white text-4xl font-semibold mb-4'>
                             About Me
@@ -172,11 +172,11 @@ const AboutMe = () => {
                             While navigating the academic landscape, I've been actively engaged in honing my skills and creating intuitive web experiences. My portfolio offers a glimpse into my journey, featuring a few impactful projects that showcase my proficiency in both front-end and back-end technologies. Despite having a modest collection of web projects, I'm driven and eager to contribute my skills to innovative initiatives through an internship. Let's connect and explore the possibilities of creating something awesome together!
                         </p>
                         <div className='flex flex-row mt-8'>
-                            <TabSwapper selectTab={() => changeTab("hardskills")} active={tab === "hardskills"}>Hard Skills</TabSwapper>
-                            <TabSwapper selectTab={() => changeTab("softskills")} active={tab === "softskills"}>Soft Skills</TabSwapper>
-                            <TabSwapper selectTab={() => changeTab("education")} active={tab === "education"}>Education</TabSwapper>
-                            <TabSwapper selectTab={() => changeTab("other")} active={tab === "other"}>Languages and Other Skills</TabSwapper>
-                            <TabSwapper selectTab={() => changeTab("hobbies")} active={tab === "hobbies"}>Hobbies</TabSwapper>
+                            <TabSwapper disabled={isPending} selectTab={() => changeTab("hardskills")} active={tab === "hardskills"}>Hard Skills</TabSwapper>
+                            <TabSwapper disabled={isPending} selectTab={() => changeTab("softskills")} active={tab === "softskills"}>Soft Skills</TabSwapper>
+                            <TabSwapper disabled={isPending} selectTab={() => changeTab("education")} active={tab === "education"}>Education</TabSwapper>
+                            <TabSwapper disabled={isPending} selectTab={() => changeTab("other")} active={tab === "other"}>Languages and Other Skills</TabSwapper>
+                            <TabSwapper disabled={isPending} selectTab={() => changeTab("hobbies")} active={tab === "hobbies"}>Hobbies</TabSwapper>
                         </div>
                         <motion.div className='px-5 mt-4'
                             animate={isOpen ? 'open' : 'closed'}
